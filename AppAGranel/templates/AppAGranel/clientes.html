@@ -1,0 +1,18 @@
+{% extends "AppAGranel/padre.html" %}
+
+{% load static %}
+
+{% block cuerpo %}
+<form action="{% url 'clientes' %}" method="POST"> {% csrf_token %}
+    <table>
+        {{formulario.as_table}}
+    </table>
+    <input type="submit" value="Cargar">
+
+</form>
+
+{% endblock %}
+
+{% block titulo %}
+<h1> Ingrese sus clientes</h1>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "AppAGranel/padre.html" %}
+
+{% load static %}
+
+{% block cuerpo %}
+
+<h1>Estamos buscando los productos {{caracteristica}}</h1>
+
+{% if productos %}
+
+<ul>
+{% for producto in productos %}
+    <li>{{producto.nombre}}</li>
+    <li>{{producto.variedad}}</li>
+    <br>
+</ul>
+{% endfor %}
+
+{% endif %}
+
+
+{% endblock %}
+
+{% block titulo %}
+<h1> Productos encontrados </h1>
+{% endblock %}
